@@ -1,10 +1,3 @@
-# -- coding: utf-8 --
-"""
-Created on Sun Apr 20 15:54:01 2025
-
-@author: LAB
-"""
-
 #app.py
 import streamlit as st
 import pickle
@@ -19,7 +12,7 @@ with open('kmeans_model.pkl', 'rb') as f:
 st.set_page_config(page_title="k-Means Clustering App", layout="centered")
 
 #Set title
-st.title(" k-Means Clustering Visualizer By Wunna Kaung Myat")
+st.title(" k-Means Clustering Visualizer By Nway Nway Kay Khaing")
 
 #Display cluster centers
 st.subheader(" Example Data for Visualization")
@@ -37,7 +30,7 @@ y_kmeans=loaded_model.predict(X)
 # Plotting
 fig,ax = plt.subplots()
 scatter=ax.scatter(X[:, 0], X[:, 1], c=y_kmeans, cmap='viridis')
-ax.scatter(loaded_model.cluster_centers_[:, 0], loaded_model.cluster_centers_[:, 1], s=300, c='red', marker='X', label='Centroids')
+ax.scatter(loaded_model.cluster_centers_[:, 0], loaded_model.cluster_centers_[:, 1], s=300, c='red', marker='.', label='Centroids')
 ax.set_title('k-Means Clustering')
 ax.legend()
 st.pyplot(fig)
