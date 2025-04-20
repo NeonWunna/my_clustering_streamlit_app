@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -- coding: utf-8 --
-"""
-Created on Sun Apr 20 15:51:29 2025
-
-@author: wunnakaungmyat
-"""
-
 import streamlit as st
 import pickle
 import matplotlib.pyplot as plt
