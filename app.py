@@ -18,6 +18,8 @@ with open('kmeans_model.pkl','rb') as f:
     
     st.title(" k-Means Clustering Visualizer by Wunna Kaung Myat")
     
+   
+    from sklearn.datasets import make_blobs
     X, _ =make_blobs(n_samples=300, centers=loaded_model.n_clusters, cluster_std=0.60, random_state=0)
     y_kmeans = loaded_model.predict(X)
 
